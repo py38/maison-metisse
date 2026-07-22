@@ -194,6 +194,9 @@ html:not(.js) .preloader{display:none}
 .film__head .section__label{color:var(--copper-lt)}
 .film__head h2{font-size:clamp(1.8rem,3.4vw,3rem);font-weight:300;color:var(--cream)}
 .film__player{max-width:1560px;margin:0 auto;overflow:hidden;border-radius:2px}
+.film video{pointer-events:none}
+.film video::-webkit-media-controls{display:none!important}
+.film video::-webkit-media-controls-enclosure{display:none!important}
 .film__player video{width:100%;aspect-ratio:16/9;object-fit:cover;background:#000;display:block}
 .film__caption{margin-top:1rem;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,241,233,.65)}
 .film__row{max-width:1560px;margin:clamp(1.2rem,3vw,2rem) auto 0;display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.2rem,3vw,2rem)}

@@ -52,12 +52,21 @@
     io.observe(el);
   });
 
-  // ── Pause other videos when one plays ──
-  var vids = document.querySelectorAll('video[controls]');
-  vids.forEach(function (v) {
-    v.addEventListener('play', function () {
-      vids.forEach(function (o) { if (o !== v) o.pause(); });
-    });
+  // ── Ensure background videos autoplay (muted loop, no controls) ──
+  document.querySelectorAll('.film video').forEach(function (v) {
+    v.muted = true;
+    var tryPlay = function () {
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+    };
+    tryPlay();
+    // retry once metadata is ready and when the video scrolls into view
+    v.addEventListener('loadeddata', tryPlay);
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (e) { if (e.isIntersecting) { tryPlay(); } });
+      }, { threshold: 0.2 }).observe(v);
+    }
   });
 
   // ── Contact form (front-end only → mailto) ──
