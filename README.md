@@ -42,8 +42,7 @@ Le site est 100 % statique : déposer le contenu du dossier `site/` sur n'import
 
 ## Notes
 
-- Le formulaire de contact ouvre l'app e-mail du visiteur (pré-rempli vers `maisonmetis2@gmail.com`).
-  Pour recevoir les messages sans app e-mail, brancher un service comme Formspree.
+- Contact : deux liens directs — e-mail (`maisonmetis2@gmail.com`) et WhatsApp (`+225 07 99 05 05 00`).
 - Réseaux dans la section contact : Instagram + Linktree (Facebook retiré).
 - Les vidéos de la section Film jouent en lecture automatique, muette, en boucle, sans contrôles.
 - Le reel principal Instagram fourni portait un filigrane d'un autre studio (« I.S.A.E ») ;

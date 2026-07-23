@@ -69,24 +69,6 @@
     }
   });
 
-  // ── Contact form (front-end only → mailto) ──
-  var form = document.getElementById('contactForm');
-  if (form) {
-    form.addEventListener('submit', function (ev) {
-      ev.preventDefault();
-      var d = new FormData(form);
-      var subject = encodeURIComponent('Nouveau projet — ' + (d.get('nom') || ''));
-      var body = encodeURIComponent(
-        'Nom : ' + (d.get('nom') || '') + '\n' +
-        'Email : ' + (d.get('email') || '') + '\n' +
-        'Téléphone : ' + (d.get('tel') || '') + '\n\n' +
-        (d.get('message') || '')
-      );
-      document.getElementById('formNote').hidden = false;
-      window.location.href = 'mailto:maisonmetis2@gmail.com?subject=' + subject + '&body=' + body;
-    });
-  }
-
   // ── Year ──
   document.getElementById('year').textContent = new Date().getFullYear();
 })();
