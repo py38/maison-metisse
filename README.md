@@ -44,6 +44,7 @@ Le site est 100 % statique : déposer le contenu du dossier `site/` sur n'import
 
 - Le formulaire de contact ouvre l'app e-mail du visiteur (pré-rempli vers `maisonmetis2@gmail.com`).
   Pour recevoir les messages sans app e-mail, brancher un service comme Formspree.
-- Le lien Facebook pointe vers `facebook.com` (URL exacte de la page à renseigner).
+- Réseaux dans la section contact : Instagram + Linktree (Facebook retiré).
+- Les vidéos de la section Film jouent en lecture automatique, muette, en boucle, sans contrôles.
 - Le reel principal Instagram fourni portait un filigrane d'un autre studio (« I.S.A.E ») ;
   il a été écarté pour ne garder que les contenus de Maison Métisse.
